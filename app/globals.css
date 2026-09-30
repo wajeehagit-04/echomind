@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #16181c;
+  --surface: #1f2227;
+  --ink: #edeae3;
+  --muted: #9a9a92;
+  --accent: #e8a33d;
+  --success: #3f8f6b;
+  --danger: #b0473f;
+  --hairline: #2c2f35;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-hairline: var(--hairline);
+  --font-serif: var(--font-source-serif-4);
+  --font-sans: var(--font-ibm-plex-sans);
+}
+
+html {
+  font-size: 125%; /* 20px base (up from the 16px browser default) — scales every text-* utility */
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-ink);
+}
+
+@keyframes phase-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.phase-transition {
+  animation: phase-fade-in 200ms ease-out;
+}

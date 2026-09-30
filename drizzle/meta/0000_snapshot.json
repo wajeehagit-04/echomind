@@ -1,0 +1,100 @@
+{
+  "id": "68016512-0fb4-4e4c-9ca8-7de88a7cc3e2",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.sessions": {
+      "name": "sessions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "word_list": {
+          "name": "word_list",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "foil_list": {
+          "name": "foil_list",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "free_recall_words": {
+          "name": "free_recall_words",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "free_recall_hits": {
+          "name": "free_recall_hits",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "free_recall_intrusions": {
+          "name": "free_recall_intrusions",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "recognition_answers": {
+          "name": "recognition_answers",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "recognition_hits": {
+          "name": "recognition_hits",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "recognition_false_alarms": {
+          "name": "recognition_false_alarms",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "discrimination_score": {
+          "name": "discrimination_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
